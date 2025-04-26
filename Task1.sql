@@ -1,36 +1,3 @@
-create database Xworkz;
-use Xworkz;
-create table Trainee_info(Outlook_id varChar(25), Trainee_name varchar(20), Course_name varChar(20),
-PhoneNo int, Gender Char(10), Attendance int(10), Address varChar(20), 
-Batch_no int, Date_of_joining varChar(20), Trainer_name varChar(20));
-
-use xworkz;
-alter table trainee_info
-add qualification varchar(30),
-add email varchar(40),
-add dob varchar(20),
-add feedback varchar(100);
-
-use xworkz;
-alter table trainee_info
-drop column address;
-
-use xworkz;
-alter table trainee_info
-rename column outlook_id to email_id,
-rename column trainee_name to name,
-rename column phoneNo to contact_no,
-rename column date_of_joining to joining_date;
-
-use xworkz;
-alter table trainee_info
-modify column email_id varchar(50),
-modify column name varchar(30),
-modify column contact_no bigint,
-modify column gender varchar(10);
-
-
-/*Orders*/
 create database orders;
 use orders;
 create table order_info(order_id int, customerr_id int,order_name varChar(20), order_date varChar(20), 
@@ -63,7 +30,6 @@ modify column amount decimal(10, 2),
 modify column placed_on date;
 
 
-/*Movies*/
 create database Movie;
 use Movie;
 create table Movie_info(Movie_name varChar(20), Actor varChar(20), Actress varChar(20), Villian varChar(20),
@@ -160,6 +126,37 @@ modify column drinks varchar(30),
 modify column contact_number int;
 
 
+
+create database Xworkz;
+use Xworkz;
+create table Trainee_info(Outlook_id varChar(25), Trainee_name varchar(20), Course_name varChar(20),
+PhoneNo int, Gender Char(10), Attendance int(10), Address varChar(20), 
+Batch_no int, Date_of_joining varChar(20), Trainer_name varChar(20));
+
+use xworkz;
+alter table trainee_info
+add qualification varchar(30),
+add email varchar(40),
+add dob varchar(20),
+add feedback varchar(100);
+
+use xworkz;
+alter table trainee_info
+drop column address;
+
+use xworkz;
+alter table trainee_info
+rename column outlook_id to email_id,
+rename column trainee_name to name,
+rename column phoneNo to contact_no,
+rename column date_of_joining to joining_date;
+
+use xworkz;
+alter table trainee_info
+modify column email_id varchar(50),
+modify column name varchar(30),
+modify column contact_no bigint,
+modify column gender varchar(10);
 
 
   
